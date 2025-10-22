@@ -1,0 +1,36 @@
+package vn.iotstar.service.impl;
+
+import java.util.List;
+
+import vn.iotstar.dao.impl.VideoDao;
+import vn.iotstar.entity.Video;
+import vn.iotstar.service.IVideoService;
+
+public class VideoServiceImpl implements IVideoService {
+	VideoDao videoDao = new VideoDao(); // Khởi tạo VideoDao
+
+	@Override
+	public List<Video> findAll() {
+		return videoDao.findAll();
+	}
+
+	@Override
+	public Video findById(String videoId) {
+		return videoDao.findById(videoId);
+	}
+
+	@Override
+	public void insert(Video video) {
+		videoDao.insert(video);
+	}
+
+	@Override
+	public void update(Video video) {
+		videoDao.update(video);
+	}
+
+	@Override
+	public void delete(String videoId) throws Exception {
+		videoDao.delete(videoId); // AbstractEntityDao đã có sẵn hàm delete(id)
+	}
+}

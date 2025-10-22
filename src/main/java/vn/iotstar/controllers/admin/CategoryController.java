@@ -31,7 +31,6 @@ import vn.iotstar.util.Constant;
 import vn.iotstar.util.UploadUtils;
 
 @MultipartConfig
-
 @WebServlet(urlPatterns = { "/admin-category", "/admin-category/create", "/admin-category/update",
 
 		"/admin-category/edit", "/admin-category/delete", "/admin-category/reset" })
