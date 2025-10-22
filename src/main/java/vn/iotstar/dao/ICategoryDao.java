@@ -4,7 +4,7 @@ import java.util.List;
 
 import vn.iotstar.entity.Category;
 
-public interface CategoryDao {
+public interface ICategoryDao {
 
 	int count();
 

@@ -7,10 +7,10 @@ import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Query;
 import jakarta.persistence.TypedQuery;
 import vn.iotstar.configs.JPAConfig;
-import vn.iotstar.dao.CategoryDao;
+import vn.iotstar.dao.ICategoryDao;
 import vn.iotstar.entity.Category;
 
-public class CategoryDaoImpl implements CategoryDao {
+public class CategoryDaoImpl implements ICategoryDao {
 
 	@Override
 	public void insert(Category category) {

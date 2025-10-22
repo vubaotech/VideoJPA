@@ -7,7 +7,7 @@ import vn.iotstar.entity.Video;
 import vn.iotstar.service.IVideoService;
 
 public class VideoServiceImpl implements IVideoService {
-	VideoDao videoDao = new VideoDao(); // Khởi tạo VideoDao
+	VideoDao videoDao = new VideoDao();
 
 	@Override
 	public List<Video> findAll() {
@@ -31,6 +31,6 @@ public class VideoServiceImpl implements IVideoService {
 
 	@Override
 	public void delete(String videoId) throws Exception {
-		videoDao.delete(videoId); // AbstractEntityDao đã có sẵn hàm delete(id)
+		videoDao.delete(videoId);
 	}
 }
