@@ -71,6 +71,35 @@
 	        <artifactId>jakarta.validation-api</artifactId>
 	        <version>3.0.2</version>
 	    </dependency>
+	    <dependency>
+			<groupId>org.hibernate</groupId>
+			
+			<artifactId>hibernate-jpamodelgen-jakarta</artifactId>
+			
+			<version>5.6.15.Final</version>
+			
+			<scope>provided</scope>
+			
+			</dependency>
+			
+			<dependency>
+			
+			<groupId>commons-beanutils</groupId>
+			
+			<artifactId>commons-beanutils</artifactId>
+			
+			<version>1.11.0</version>
+			
+			</dependency>
+			
+			<dependency>
+			
+			<groupId>commons-io</groupId>
+			
+			<artifactId>commons-io</artifactId>
+			
+			<version>2.11.0</version>
+		</dependency>
 	</dependencies>
 	
 		<build>

@@ -77,13 +77,15 @@
 						href="/shareVideo?videoId=${p.videoId}"><i
 							class="rating-selected fa fa-star"></i> Share </a></li>
 
+					<c:if test="${not empty sessionScope.acc}">
+						<li class="like-icon"><a
+							data-original-title="Add to wishlist" data-toggle="tooltip"
+							data-placement="left" class="tooltips"
+							href="/likeVideo?videoId=${p.videoId}&username=${sessionScope.acc.username}"><i
+								class="fa fa-heart"></i> ${p.views} </a></li>
 
-					<li class="like-icon"><a data-original-title="Add to wishlist"
-						data-toggle="tooltip" data-placement="left" class="tooltips"
-						href="/likeVideo?videoId=${p.videoId}&username=${sessionScope.acc.username}"><i
-							class="fa fa-heart"></i> ${p.views} </a></li>
-
-					<li class="like-icon"></li>
+						<li class="like-icon"></li>
+					</c:if>
 
 				</ul>
 

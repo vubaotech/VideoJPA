@@ -98,7 +98,8 @@ public class Video implements Serializable {
 		this.views = views;
 	}
 	
-	@ManyToOne
+//	@ManyToOne
+	@ManyToOne(fetch = jakarta.persistence.FetchType.EAGER)
 	@JoinColumn(name="CategoryId")
 	private Category category;
 

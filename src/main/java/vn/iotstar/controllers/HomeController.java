@@ -3,6 +3,9 @@ package vn.iotstar.controllers;
 import java.io.IOException;
 import java.util.List;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -44,6 +47,23 @@ public class HomeController extends HttpServlet {
 			// thông báo
 
 			req.setAttribute("categorys", listc);
+			
+			// Tạo Map để đếm số video cho mỗi category
+		    Map<Category, Integer> count = new HashMap<>();
+		    for (Category cat : listc) {
+		        int categoryCount = 0;
+		        for (Video vid : list) {
+		            // Giả sử Video có phương thức getCategory() trả về đối tượng Category
+		            // và Category có phương thức getId() trả về int
+		            if (vid.getCategory() != null && vid.getCategory().getId() == cat.getId()) {
+		                categoryCount++;
+		            }
+		        }
+		        count.put(cat, categoryCount);
+		    }
+		    
+		    // Đặt Map count vào request
+		    req.setAttribute("count", count);
 
 		} catch (Exception e) {
 
